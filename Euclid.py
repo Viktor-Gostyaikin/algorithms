@@ -1,14 +1,9 @@
-def eculid(m:float, n:float):
+def eculid(m:int, n:int):
     if n > m:
         m, n = n, m
-    changed = True
-    while changed:
-        m = m % n
-        if m == 0:
-            changed == False
-            return n
-        else:
-            n = n % m
-            if n == 0:
-                changed == False
-                return m
+    r=m%n
+    while r:
+        m=n
+        n=r
+        r=m%n
+    return n
